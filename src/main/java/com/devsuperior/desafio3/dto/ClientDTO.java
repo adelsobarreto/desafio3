@@ -2,6 +2,7 @@ package com.devsuperior.desafio3.dto;
 
 import com.devsuperior.desafio3.entities.Client;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
@@ -11,12 +12,13 @@ public class ClientDTO {
 
     private Long id;
     //@Size(min = 3, max = 80, message = "Nome precisa ter de 3 a 80 caracteres")
-    //@NotBlank(message = "Campo requerido")
+    @NotBlank(message = "Campo requerido")
     private String name;
     //@Size(min=10, message = "Descrição precisa ter no mínimo 10 caracteres")
     private String cpf;
     //@Positive(message = "O preço deve ser positivo")
     private Double income;
+    @PastOrPresent(message = "Data inválida")
     private LocalDate birthDate;
     private Integer children;
 
