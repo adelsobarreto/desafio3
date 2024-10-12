@@ -1,4 +1,8 @@
 package com.devsuperior.desafio3.repositories;
 
-public interface ClientRepository {
+import com.devsuperior.desafio3.entities.Client;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ClientRepository extends JpaRepository<Client, Long> {
+
 }
